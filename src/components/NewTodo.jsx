@@ -4,8 +4,15 @@ import { useState, useEffect, useRef } from "react";
 function NewTodo({ setValues, values }) {
   const [task, setTask] = useState("");
 
-  useEffect(() => {
-    setValues(JSON.parse(localStorage.getItem("todos")));
+  // useEffect(() => {
+  //   setValues(JSON.parse(localStorage.getItem("todos")));
+  // }, []);
+
+   useEffect(() => {
+    const storedTodos = localStorage.getItem("todos");
+    if (storedTodos !== null) {
+      setValues(JSON.parse(storedTodos));
+    }
   }, []);
 
   // useEffect(() => {
