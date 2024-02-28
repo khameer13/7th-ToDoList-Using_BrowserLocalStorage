@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 
 function Todocards({ values, setValues }) {
   const [privateTodoValues, setPrivateTodoValues] = useState([{
-       todoID: "",
-       todoTask: "",
-       todoCheck: false,
     }]);
 
   useEffect(() => {
@@ -48,7 +45,6 @@ function Todocards({ values, setValues }) {
                                    : " w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base dark:bg-gray-700 dark:border-gray-600 dark:text-white line-through mb-4 flex justify-content"}
           >
            <input className="mr-2" type="checkbox" value={i.todoCheck}  checked={!i.todoCheck}  onChange={()=>handlecheck(i.todoID)} /> {i.todoTask}
-           {console.log(i)}
           </div>
         ))}
         <button
