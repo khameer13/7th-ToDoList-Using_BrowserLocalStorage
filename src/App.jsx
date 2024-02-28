@@ -4,13 +4,13 @@ import Todocards from "./components/Todocards";
 import NewTodo from "./components/NewTodo";
 
 function App() {
-  const [values, setValues] = useState([
+  const [values, setValues] = useState([]);
     // {
     //   todoID: "",
     //   todoTask: "",
     //   todoCheck: false,
     // },
-  ]);
+  
 
   return (
     <>
