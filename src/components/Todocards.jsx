@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 function Todocards({ values, setValues }) {
-  const [privateTodoValues, setPrivateTodoValues] = useState([]);
+  const [privateTodoValues, setPrivateTodoValues] = useState([{
+       todoID: "",
+       todoTask: "",
+       todoCheck: false,
+    }]);
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"));
